@@ -30,8 +30,8 @@ class Karaoke(commands.Cog):
                             '{prefix}add [user] **-** Add the mentioned user from the queue.\n' \
                             '{prefix}swap [user1] [user2] **-** Swaps the Mentioned users on the queue.\n' \
                             '{prefix}lock **-** lock or unlock the command for the queue.\n' \
-                            'need help? kindly DM Euskara#0001'
-        embed.set_footer(text='The Camp™')
+                            'need help? kindly DM Focus™#0001'
+        embed.set_footer(text='set your footer here')
         await ctx.send(embed=embed)
 
     @commands.command(name='queue')
@@ -117,7 +117,7 @@ class Karaoke(commands.Cog):
         if ctx.channel not in self.current_users:
             embed = discord.Embed(colour=discord.Colour.dark_red())
             embed.description = 'The queue is currently empty'
-            embed.set_footer(text='The Camp™')
+            embed.set_footer(text='set your footer here')
             return await ctx.send(embed=embed)
         if ctx.author is not self.current_users[ctx.channel][0]:
             embed = discord.Embed(colour=discord.Colour.dark_red())
